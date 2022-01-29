@@ -1,0 +1,135 @@
+html
+{
+    scroll-behavior: smooth;
+    overflow-y: visible;
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+body>img:nth-child(1)
+{
+    top: 0px;
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.8;
+}
+body>div:nth-child(n + 1)
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: white;
+}
+body>div>img
+{
+    width: 100px;
+    transition: 1s;
+}
+body>div>img:hover
+{
+    width: 200px;
+    cursor: pointer;
+}
+body div
+{
+    margin-bottom: 50vh;
+    border-bottom: 10px solid white;
+}
+body>div:nth-child(3)>p
+{
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: clamp(20px, 1vw, 500px);
+    font-family: corbel;
+}
+body>div:nth-child(3)>h1
+{
+    font-size: clamp(20px, 3vw, 500px);
+    margin-bottom: 0;
+    padding-bottom: 1vw;
+}
+body div:nth-child(4)
+{
+    flex-direction: row;
+    justify-content: space-around;
+    border: 0;
+    margin: 0;
+}
+body div>div
+{
+    margin-top: 10px;
+    margin-bottom: 0;
+    border: 0;
+}
+body div:nth-child(4)>div>img
+{
+    width: 20vw;
+    height: 20vw;
+    cursor: pointer;
+    transition: 500ms;
+    opacity: 0.8;
+}
+body div:nth-child(4)>div>img:hover
+{
+    opacity: 1;
+}
+body div:nth-child(5)
+{
+    position: relative;
+    display: none; /*flex*/
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+body div:nth-child(5) button
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3vw;
+    height: 3vw;
+    border: 0.5vw solid white;
+    background-color: white;
+    transition: 250ms;
+}
+body div:nth-child(5) button:hover
+{
+    border-color: red;
+    background-color: red;
+}
+body div:nth-child(5)
+{
+    text-align: center;
+}
+body div:nth-child(5)>div
+{
+    position: absolute;
+    display: none;
+    width: 80%;
+    max-height: 80vh;
+    background-color: white;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+div:nth-child(5)>div:nth-child(4)>img
+{
+    height: 400px;
+}
