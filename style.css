@@ -142,12 +142,12 @@ div:nth-child(5)>div:nth-child(4)>img
 {
     height: 400px;
 }
-div:nth-last-child(2)>div p
+div:nth-last-child(3)>div p
 {
     width: 80%;
     font-size: clamp(20px, 10vw, 15px);
 }
-div:nth-last-child(2)>div h1
+div:nth-last-child(3)>div h1
 {
     font-size: clamp(50px, 10vw, 15px);
     margin: 0;
