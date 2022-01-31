@@ -97,9 +97,10 @@ body div:nth-child(5)
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 0.664);
+    backdrop-filter: blur(3px);
 }
-body div:nth-child(5) button
+body div:nth-child(5) button, div:nth-last-child(1)>button:nth-child(1)
 {
     position: absolute;
     top: 0;
@@ -110,7 +111,7 @@ body div:nth-child(5) button
     background-color: white;
     transition: 250ms;
 }
-body div:nth-child(5) button:hover
+body div:nth-child(5) button:hover, div:nth-last-child(1)>button:nth-child(1):hover
 {
     border-color: red;
     background-color: red;
@@ -121,15 +122,127 @@ body div:nth-child(5)
 }
 body div:nth-child(5)>div
 {
-    position: absolute;
+    position: static;
     display: none;
+    align-items: center;
+    justify-content: initial;
+    text-align: center;
+    flex-direction: column;
     width: 80%;
     max-height: 80vh;
     background-color: white;
     overflow: scroll;
     overflow-x: hidden;
 }
+div:nth-child(5)>div:nth-child(3)
+{
+    overflow: hidden;
+}
 div:nth-child(5)>div:nth-child(4)>img
 {
     height: 400px;
+}
+div:nth-last-child(2)>div p
+{
+    width: 80%;
+    font-size: clamp(20px, 10vw, 15px);
+}
+div:nth-last-child(2)>div h1
+{
+    font-size: clamp(50px, 10vw, 15px);
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+/*slider*/
+
+body>div:nth-last-child(1)
+{
+    top: 0;
+    position: fixed;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+    backdrop-filter: blur(3px);
+    display: none;
+}
+.buttons button
+{
+    position: absolute;
+    z-index: 1;
+    border: none;
+    width: 10%;
+    background-color: rgb(255, 255, 255, 0.5);
+    transition: background-color 500ms;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 10vw, 50px);
+}
+.buttons button:nth-child(1)
+{
+    top:0px;
+    right: 0px;
+    height: 100%;
+}
+.buttons button:nth-child(2)
+{
+    top: 0px;
+    left: 0px;
+    height: 100%;
+}
+.buttons button:hover{
+    background-color: rgb(255, 255, 255, 1);
+}
+.links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+.links img
+{
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    height: 100%;
+    display: none;
+    z-index: 0;
+    transition: 1s;
+    background-color: white;
+}
+
+table, th, td
+{
+    border: 1px solid blue;
+    text-align: left;
+}
+th, td
+{
+    padding: 10px;
+}
+
+/*Meu Link config*/
+body > a
+{
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    border-radius: 1vw;
+    position: fixed;
+    text-align: center;
+    opacity: 0.8;
+    text-decoration: none;
+}
+body > a > p
+{
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
