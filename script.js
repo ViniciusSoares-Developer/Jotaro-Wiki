@@ -6,10 +6,6 @@ let divs = document.getElementsByTagName('div'),
     sounds = divs[10].getElementsByTagName('audio'),
     PlaySound = divs[10].getElementsByTagName('img')
 
-console.log(btnClose[0])
-console.log(slider)
-console.log(divs)
-
 divs[3].onclick = () => {
     divs[7].style.display = "flex"
     divs[8].style.display = "flex"
